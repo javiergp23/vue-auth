@@ -11,11 +11,11 @@ export default{
   methods: {
     async signIn(){
       try{
-        const userCredentials = await signInWithEmailAndPassword(auth, this.email, this.password)
-        const user = userCredentials.user
+        const { email, password } = this
+        const{ user } = await signInWithEmailAndPassword(auth, email, password)
         console.log('Usuario autenticado con éxito', user)
       }catch(error){
-        console.error(error, 'Error al autenticar el usuario')
+        console.error(error, 'Error en las credenciales')
       }
     }
   }
