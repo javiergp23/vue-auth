@@ -1,5 +1,5 @@
 <script>
-
+import firebase from "../firebaseConfig.js";
 </script>
 
 <template>
