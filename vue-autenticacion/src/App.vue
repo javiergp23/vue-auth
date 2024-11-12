@@ -1,36 +1,17 @@
 <script>
-import { createUserWithEmailAndPassword, auth } from "@/auth";
-
-  export default {
-    data(){
-      return {
-        email: "",
-        password: "",
-      }
-    },
-    methods: {
-      async register(){
-        try{
-          const userCredentials = await createUserWithEmailAndPassword(auth, this.email, this.password)
-          const user = userCredentials.user
-          console.log('Usuario creado con éxito', user)
-        }catch(error){
-          console.error(error, 'Erro al crear el usuario')
-        }
-      }
-    }
+  export default{
+    name: 'App' 
   }
 </script>
-
 <template>
   
   <div>
-    <h1>Registro</h1>
-    <input type="text" v-model="email" placeholder="Email">
-    <input type="password" v-model="password" placeholder="Contraseña">
-    <button @click="register">Registrar</button>
+   <router-link to="/">Home</router-link>
+   <router-link to="/login">Login</router-link>
+   <router-link to="/register">Register</router-link>
   </div>
  
+  <router-view/>
 </template>
 
 <style scoped>
