@@ -4,4 +4,10 @@ import firebaseApp from "../firebaseConfig.js";
 
 const auth = getAuth(firebaseApp); 
 
-export {auth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged}
+export {
+    auth, 
+    signInWithEmailAndPassword,
+    createUserWithEmailAndPassword, 
+    signOut, 
+    onAuthStateChanged
+}
