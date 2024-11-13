@@ -23,7 +23,7 @@ import { onAuthStateChanged, auth } from "@/auth";
   <div>
    <router-link to="/">Login</router-link>
    <router-link to="/register">Register</router-link>
-   <router-link to="/about" >About</router-link>
+   <router-link to="/about" v-if="isAuthenticated" >About</router-link>
   </div>
  
   <router-view/>
